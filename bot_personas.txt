@@ -1,0 +1,22 @@
+
+$(document).ready(function(){
+	
+var form = document.getElementById("form1");
+
+for(var i = 13; i < form.length; i++)
+{
+	go_to_resource(i);
+}
+
+
+
+function go_to_resource(index)
+{
+	var goto_time = (index - 13)*9000;
+	var reg_id = form[index].id.split('_')[1];
+	var win;
+	setTimeout(function() {
+		win = window.open('printVersion.cfm?idcentro=1363&idrecurso=' + reg_id, 'PRINT','height=400,width=600');
+	},goto_time);
+}
+});
