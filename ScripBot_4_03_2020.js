@@ -98,11 +98,11 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#modal_imprimir_proceso").trigger("formato_seleccionado", { formato: "html", orientacion: "Vertical", tamanio_fuente: "undefined" });
 
-            //console.log(document.getElementById('contenedor_ficha_proceso_'+numero_de_proceso_x).id);
-            var id = 3028949;
-            var row_array = document.getElementById("datatable_acciones_" + numero_de_proceso_x).getElementsByTagName('tr');
+            console.log(document.getElementById('contenedor_ficha_proceso_'+numero_de_proceso_x).childNodes[37]);
+            //var id = 3028949;
+            //var row_array = document.getElementById("datatable_acciones_" + numero_de_proceso_x).getElementsByTagName('tr');
             //console.log(row_array);
-            var id_fase, con_permisos, id_proceso, id_accion, exec_time;
+            /*var id_fase, con_permisos, id_proceso, id_accion, exec_time;
 
             for (var i = 1; i < row_array.length; i++) {
                 id_fase = row_array[i].getAttribute("id_fase");
@@ -113,7 +113,7 @@ $(document).ready(function () {
                 exec_time = (i - 1) * 6000;
                 EjecutarInterna(id_accion, i);
             }
-
+*/
             console.log("Imprimir");
         }, delayInMilliseconds_proceso_secundario);
 
