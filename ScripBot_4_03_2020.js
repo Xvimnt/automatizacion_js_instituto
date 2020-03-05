@@ -98,7 +98,9 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#modal_imprimir_proceso").trigger("formato_seleccionado", { formato: "html", orientacion: "Vertical", tamanio_fuente: "undefined" });
 
-            console.log(document.getElementById('contenedor_ficha_proceso_'+numero_de_proceso_x).childNodes[37]);
+            
+            var partir=(document.getElementById('contenedor_ficha_proceso_'+numero_de_proceso_x).childNodes[37].id).split("_");
+            console.log(partir[3]);
             //var id = 3028949;
             //var row_array = document.getElementById("datatable_acciones_" + numero_de_proceso_x).getElementsByTagName('tr');
             //console.log(row_array);
